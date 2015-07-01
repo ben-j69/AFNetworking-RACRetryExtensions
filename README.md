@@ -34,7 +34,7 @@ RACSignal* getSignal = [manager rac_GET:@"http://example.org" parameters:nil ret
 // Subscribe to signal to start request
 [getSignal subscribeNext:^(RACTuple *response) {
     id object = [response first];
-    NSHTTPURLResponse urlResponse = [response second];
+    NSHTTPURLResponse *urlResponse = [response second];
 } error:^(NSError *error) {
     // Handle error
 }];
